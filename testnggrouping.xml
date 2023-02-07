@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+      <groups>
+          <define name="group1">
+               <include name="sanity"></include>
+               <include name="smoke"></include>
+          </define>
+          <define name="group2">
+               <include name="regression"></include>
+               <include name="sanity"></include>
+          </define>
+          <define name="group3">
+               <include name="reset"></include>
+               <include name="regression"></include>
+          </define>
+          <run>
+               <include name="group1"></include>
+               <exclude name="group2"></exclude>
+          </run>
+  </groups>
+    <classes>
+      <class name="org.group.GroupingTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

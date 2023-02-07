@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.rerun.WithoutKnownFailed"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="org.rerun.Case2">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="testd"/>
+          <include name="beforeClass"/>
+          <include name="afterMethod"/>
+          <include name="testc"/>
+        </methods>
+      </class> <!-- org.rerun.Case2 -->
+      <class name="org.rerun.Case3">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="testC"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testB"/>
+        </methods>
+      </class> <!-- org.rerun.Case3 -->
+      <class name="org.rerun.Case1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="test3"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- org.rerun.Case1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
